@@ -1,0 +1,558 @@
+html {
+  font-family: "Exo", sans-serif;
+  color: #ffffff;
+  font-size: 2vh;
+  line-height: 2.2;
+  font-weight: 400;
+  background-color: black;
+}
+
+button,
+textarea,
+input {
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  scrollbar-color: red;
+}
+button {
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+h1 {
+  font-size: 8vh;
+  line-height: 10vh;
+  font-weight: 400;
+}
+/*Title component */
+
+.title {
+  font-size: 7vh;
+  text-align: center;
+  line-height: 15vh;
+  margin-bottom: -10vh;
+}
+
+.title_bg {
+  position: relative;
+  top: -15vh;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  font-size: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.title_img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.title_gradient {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 15vh;
+  background: linear-gradient(rgba(158, 11, 158, 0.2), rgba(0, 0, 0, 1));
+}
+body {
+  margin: 0;
+}
+.green {
+  color: #6dff00;
+}
+#app {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10vw;
+  background: #000000;
+  border-right: 3px solid white;
+}
+.main {
+  width: 90vw;
+  height: 100vh;
+  overflow: hidden;
+}
+/* Main styles */
+.background {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  z-index: -1;
+  font-size: 0px;
+  line-height: 0px;
+}
+.bg_img {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  z-index: -1;
+}
+.gradient {
+  background: linear-gradient(
+    -70deg,
+    rgba(158, 11, 158, 0.3) -30%,
+    rgba(0, 0, 0, 1) 80%
+  );
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+.rev {
+  transform: scaleY(-1);
+}
+#Home_Title {
+  display: inline-block;
+  position: absolute;
+  top: 30vh;
+  left: 20vw;
+}
+#Avatar {
+  position: absolute;
+  width: 20vw;
+  top: 23vh;
+  right: 8vw;
+}
+#Home_text {
+  position: absolute;
+  width: 80vw;
+  top: 64vh;
+  left: 20vw;
+}
+/*Skill section*/
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skill_box {
+  width: 44.8vw;
+
+  font-size: 1.8vh;
+}
+
+.section_title {
+  font-size: 3vh;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+.skill_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.column {
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.skill_name {
+  margin: 1.5vh 0 1.5vh 0;
+  align-self: center;
+  height: 3vh;
+}
+
+.skill_logo {
+  margin: 1.5vh 0 1.5vh 0;
+  align-self: center;
+  height: 3vh;
+}
+
+.skill_logo img {
+  height: 100%;
+}
+
+/*Projects*/
+
+.carousel {
+  position: relative;
+}
+.button {
+  position: absolute;
+  background-color: black;
+  height: 7vh;
+  top: 40%;
+  z-index: 4;
+}
+.button img {
+  height: 100%;
+}
+
+.right {
+  right: calc(20% - 10vh);
+  transform: scale(-1);
+}
+.left {
+  left: calc(20% - 10vh);
+}
+
+.dots {
+  margin: 5% auto 0 auto;
+  left: 50%;
+  top: 120%;
+  display: flex;
+  justify-content: center;
+}
+.dot {
+  height: calc(1vh + 0.5vw);
+  width: calc(1vh + 0.5vw);
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0.5vw;
+}
+
+.selected {
+  background: #6dff00;
+}
+.project {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  height: 60vh;
+  background: #000000;
+}
+
+.project_box {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 80%;
+  width: 80%;
+  margin-left: 10%;
+  justify-content: center;
+}
+.project_image {
+  position: absolute;
+  max-height: 100%;
+  z-index: 2;
+}
+.project_detail {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 90%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.project_image:hover {
+  z-index: 0;
+}
+
+.project_detail:hover {
+  z-index: 3;
+}
+
+.git_hub {
+  margin-right: 10vw;
+  width: calc(3vw + 5vh);
+  height: calc(3vw + 5vh);
+  text-align: center;
+}
+
+.git_hub img {
+  width: 100%;
+}
+
+.project_link {
+  width: calc(3vw + 5vh);
+  height: calc(3vw + 5vh);
+  text-align: center;
+}
+
+.project_link img {
+  width: 100%;
+}
+
+.project_title {
+  font-size: 2.5vh;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.project_stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.project_icon {
+  height: 4vh;
+  margin: 0 2vw 0 2vw;
+}
+.project_icon img {
+  height: 100%;
+}
+
+/* Contact */
+
+.text_box {
+  text-align: center;
+  font-size: 1.8vh;
+  width: calc(20% + 40vh);
+  margin: 0 auto 5vh auto;
+}
+
+.form_box {
+  width: calc(20% + 40vh);
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_row {
+  width: 90%;
+  margin: 0 auto 3vh auto;
+}
+input {
+  text-indent: 2vw;
+  font-family: "Exo";
+  padding: 0;
+  border: 0;
+  background-color: #292929;
+  border-bottom: 0.3vh solid #ffffff;
+  margin: 0;
+  color: #ffffff;
+  font-size: 2vh;
+  line-height: 2;
+}
+
+input::placeholder {
+  color: #f0f0f0;
+}
+#Name {
+  width: 48%;
+  margin-right: 4%;
+}
+#E-mail {
+  width: 48%;
+}
+#Subject {
+  width: 90%;
+  display: block;
+  margin: 0 auto 3vh auto;
+}
+
+#Message {
+  text-indent: 2vw;
+  display: block;
+  width: 90%;
+  margin: 0 auto 3vh auto;
+  line-break: normal;
+  font-family: "Exo";
+  padding: 0;
+  border: 0;
+  background-color: #292929;
+  border-bottom: 0.3vh solid #ffffff;
+  color: #ffffff;
+  font-size: 2vh;
+  line-height: 2;
+}
+
+#submit_button {
+  text-indent: 0;
+  text-align: center;
+  margin: 2vh 0 0 70%;
+  width: 20%;
+  border-bottom: 0.3vh solid #6dff00;
+}
+
+#submit_button:hover {
+  color: #6dff00;
+}
+
+.contact_info {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#Message::placeholder {
+  color: #f0f0f0;
+}
+
+/*Nav*/
+
+.lang {
+  width: 10vh;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.lang div:hover {
+  border-bottom: 0.3vh solid #6dff00;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20vh;
+}
+
+.link_box {
+  position: relative;
+  display: block;
+  width: 4vh;
+  height: 4vh;
+}
+
+.nav_img {
+  width: 4vh;
+  height: 4vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease 0.5s;
+  opacity: 1;
+}
+
+.nav_img img {
+  height: 100%;
+}
+.link_box:hover .nav_img {
+  opacity: 0;
+}
+.nav_text {
+  width: 8vh;
+  height: 4vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  opacity: 1;
+  transition: ease 0.5s;
+  text-align: center;
+  opacity: 0;
+  font-size: 1.6vh;
+  line-height: 4vh;
+}
+.link_box:hover .nav_text {
+  color: #6dff00;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1280px) {
+  #Home_Title {
+    left: 16vw;
+    font-size: 7vh;
+  }
+  #Avatar {
+    top: 27vh;
+    right: 6vw;
+  }
+  #Home_text {
+    left: 16vw;
+    font-size: 1.9vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #Home_Title {
+    left: 10vw;
+    font-size: 5vw;
+    line-height: 10vw;
+  }
+  #Avatar {
+    right: 12vw;
+    width: 25vw;
+  }
+  #Home_text {
+    top: 58vh;
+    left: 10vw;
+  }
+  #app {
+    flex-direction: column;
+  }
+  .nav {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 3px solid white;
+    width: 100vw;
+    height: 10vh;
+  }
+  .main {
+    width: 100vw;
+    height: 90vh;
+  }
+  .links {
+    margin-top: 0;
+    margin-left: 10vw;
+    flex-direction: row;
+    height: 10vh;
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+  #Home_Title {
+    left: 7vw;
+    top: 40vh;
+    font-size: 7vw;
+    line-height: 14vw;
+  }
+  #Avatar {
+    width: 40vw;
+    left: 30vw;
+    top: 16vh;
+  }
+  #Home_text {
+    left: 7vw;
+    top: 64vh;
+    width: 84vw;
+    font-size: 3vw;
+    line-height: 6vw;
+  }
+  .title {
+    font-size: 5vh;
+  }
+  .contact_info {
+    margin: 1vh;
+    font-size: 1.4vh;
+  }
+  .column {
+    width: 15vh;
+  }
+  .text_box {
+    width: 90vw;
+  }
+  .form_box {
+    width: 90vw;
+  }
+}
