@@ -5,7 +5,6 @@ import { home, gear, bag, mail } from "../assets/icons_white";
 
 const Nav = props => {
   const { lang, setLanguage } = useContext(LanguageContext);
-  console.log("LANG", lang);
   return (
     <div className="nav">
       <div className="lang">

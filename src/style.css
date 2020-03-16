@@ -29,12 +29,11 @@ a {
   text-decoration: none;
 }
 h1 {
-  font-size: 8vh;
-  line-height: 10vh;
+  font-size: calc(4vh + 2vw);
+  line-height: 1.5;
   font-weight: 400;
 }
 /*Title component */
-
 .title {
   font-size: 7vh;
   text-align: center;
@@ -480,9 +479,13 @@ input::placeholder {
 #submit_button {
   text-indent: 0;
   text-align: center;
-  margin: 2vh 0 0 70%;
   width: 20%;
   border-bottom: 0.3vh solid #6dff00;
+}
+.feedback {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
 }
 
 #submit_button:hover {
@@ -612,6 +615,15 @@ input::placeholder {
   opacity: 1;
 }
 
+@media only screen and (max-width: 1440px) {
+  #Home_Title {
+    left: 16vw;
+  }
+  #Home_text {
+    left: 16vw;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   #Home_Title {
     left: 16vw;
@@ -624,6 +636,11 @@ input::placeholder {
   #Home_text {
     left: 16vw;
     font-size: 1.9vh;
+  }
+  #Avatar {
+    right: 12vw;
+    top: 20vh;
+    width: 18vw;
   }
 }
 
@@ -672,7 +689,7 @@ input::placeholder {
     width: 80vw;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 600px) {
   #Home_Title {
     left: 7vw;
     top: 40vh;

@@ -2,8 +2,16 @@ import React, { useState, useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 import Project from "./Project";
 import Title from "./Title";
-import { purpleChess, snake } from "../assets/img";
-import { arrow, mongo, node, html, css, js } from "../assets/icons_white";
+import { purpleChess, snake, thisWebsite } from "../assets/img";
+import {
+  arrow,
+  mongo,
+  node,
+  html,
+  css,
+  js,
+  react
+} from "../assets/icons_white";
 const projects = [
   {
     stack: [
@@ -28,6 +36,17 @@ const projects = [
     title: "Snake for two",
     gitHub: "https://github.com/TheKapitanKorek/snake",
     webSite: "https://thekapitankorek.github.io/snake"
+  },
+  {
+    stack: [
+      { name: "js", logo: js },
+      { name: "css", logo: css },
+      { name: "react", logo: react }
+    ],
+    picture: thisWebsite,
+    title: "This Website",
+    gitHub: "https://github.com/TheKapitanKorek/personalWebsite",
+    webSite: "/"
   }
 ];
 

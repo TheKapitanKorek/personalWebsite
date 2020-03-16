@@ -4,7 +4,6 @@ import { browser, gitHub } from "../assets/icons_white";
 
 const Project = ({ project }) => {
   const { lang } = useContext(LanguageContext);
-  console.log(lang);
   const genTechStack = arr =>
     arr.map(el => (
       <div className="project_icon" id={el.name}>
