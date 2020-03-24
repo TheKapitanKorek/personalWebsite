@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 import Project from "./Project";
 import Title from "./Title";
-import { purpleChess, snake, thisWebsite } from "../assets/img";
+import { purpleChess, snake, thisWebsite, pandaTracker } from "../assets/img";
 import {
   arrow,
   mongo,
@@ -47,6 +47,13 @@ const projects = [
     title: "This Website",
     gitHub: "https://github.com/TheKapitanKorek/personalWebsite",
     webSite: "/"
+  },
+  {
+    stack: [{ name: "js", logo: js }],
+    picture: pandaTracker,
+    title: "PandaTracker (data processing on client side)",
+    gitHub: "https://gitlab.com/Neurochrom/pandatracker/-/tree/master/front",
+    webSite: "http://pandatracker.org/"
   }
 ];
 
@@ -66,8 +73,23 @@ const findProjectIndex = (dir, cur) => {
 };
 
 const Portfolio = props => {
+  console.log(projects[0]);
   const [project, setProject] = useState(0);
   const { lang } = useContext(LanguageContext);
+  const renderDots = selectedProject => {
+    const dots = [];
+    for (let i = 0; i < projects.length; i++) {
+      dots.push(
+        <div
+          className={`dot${i === selectedProject ? " selected" : ""}`}
+          onClick={() => {
+            setProject(i);
+          }}
+        />
+      );
+    }
+    return dots;
+  };
   return (
     <div className="main">
       <Title title={lang === "EN" ? "Projects" : "Projekty"} />
@@ -89,11 +111,7 @@ const Portfolio = props => {
           <img src={arrow} alt="arrow icon right" />
         </button>
         <Project project={projects[project]} />
-        <div className="dots">
-          <div className="dot selected" />
-          <div className="dot" />
-          <div className="dot" />
-        </div>
+        <div className="dots">{renderDots(project)}</div>
       </div>
     </div>
   );

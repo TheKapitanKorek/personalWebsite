@@ -3,7 +3,7 @@
 html {
   font-family: "Exo", sans-serif;
   color: #ffffff;
-  font-size: 2vh;
+  font-size: 2.2vh;
   line-height: 2.2;
   font-weight: 400;
   background-color: black;
@@ -187,7 +187,7 @@ body {
 .skill_box {
   width: 44.8vw;
 
-  font-size: 1.8vh;
+  font-size: 2.2vh;
 }
 
 .section_title {
@@ -228,7 +228,7 @@ body {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  height: 3vh;
+  height: 4vh;
 }
 
 .skill_logo {
@@ -236,7 +236,7 @@ body {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  height: 3vh;
+  height: 4vh;
 }
 
 .skill_logo img {
@@ -286,6 +286,9 @@ body {
   background: #ffffff;
   border-radius: 50%;
   margin: 0.5vw;
+}
+.dot:hover {
+  cursor: pointer;
 }
 
 .selected {
@@ -394,7 +397,7 @@ body {
 
 .text_box {
   text-align: center;
-  font-size: 1.8vh;
+  font-size: 2vh;
   width: calc(20% + 40vh);
   margin: 0 auto 5vh auto;
 }
