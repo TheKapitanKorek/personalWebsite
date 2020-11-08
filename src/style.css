@@ -110,7 +110,7 @@ body {
 .main {
   width: 90vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 /* Main styles */
 .background {
@@ -186,7 +186,6 @@ body {
 
 .skill_box {
   width: 44.8vw;
-
   font-size: 2.2vh;
 }
 
@@ -713,6 +712,9 @@ input::placeholder {
   }
   .title {
     font-size: 5vh;
+  }
+  .skill_box:last-of-type {
+    height: 20px;
   }
   .contact_info {
     margin: 1vh;
